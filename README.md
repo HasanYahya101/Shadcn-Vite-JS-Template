@@ -1,4 +1,4 @@
-## Introduction
+# Introduction
 
 This repo serves as a template that supports ShadCN Components (that use Radix UI library). It allows you to make react applications in Javascript (not Typescript). Just download or clone it. Run `npm install` and `npm run dev` to run the project. It supports ShadCN and V0 by Vercel out of the box (no need to install anything else). Please note that this repo was last updated in June 2024. If too much time has passed, these configurations might have become outdated. In such a case please check how to setup ShadCN with React and Javacript manually from somewhere else.
 
