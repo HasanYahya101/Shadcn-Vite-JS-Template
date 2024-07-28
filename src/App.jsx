@@ -1,35 +1,31 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import { Button } from './components/ui/button'
-import './App.css'
+import { useState } from 'react';
+import { Button } from './components/ui/button';
+import { ThemeProvider } from './components/theme-provider';
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <Button variant="outline" className="mb-4" onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </Button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
+    <ThemeProvider defaultTheme="system" storageKey="vite-ui-theme">
+      <div className="min-h-screen min-w-screen bg-white dark:bg-black items-center justify-center">
+        <h1 className="text-center pt-[34vh]">Vite + React</h1>
+        <div className="p-8 flex flex-col items-center">
+          <Button
+            variant="outline"
+            className="mb-4"
+            onClick={() => setCount((count) => count + 1)}
+          >
+            count is {count}
+          </Button>
+          <p className="text-center">
+            Edit <code>src/App.jsx</code> and save to test HMR
+          </p>
+        </div>
+        <p className="text-gray-600 text-center">
+          Click on the Vite and React logos to learn more
         </p>
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    </ThemeProvider>
   )
 }
 
